@@ -8,9 +8,9 @@
   <p align="center">
     <a href="https://github.com/Gazentia">About Me</a>
     ·
-    <a href="https://github.com/Gazentia/frontend-webpack-boilerplate/issues">Report Bug</a>
+    <a href="https://github.com/Gazentia/crowdfunding-product-page-main/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Gazentia/frontend-webpack-boilerplate/issues">Request Feature</a>
+    <a href="https://github.com/Gazentia/crowdfunding-product-page-main/issues">Request Feature</a>
   </p>
 </div>
 
