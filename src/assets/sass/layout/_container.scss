@@ -1,0 +1,13 @@
+.container {
+    padding: 0 24px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include breakpoint-up("md") {
+        max-width: map-get($mwidth, md);
+    }
+}
+
+.main-wrapper {
+    margin-top: 233.39px;
+}

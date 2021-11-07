@@ -1,0 +1,206 @@
+.card {
+    position: relative;
+    border: 1px solid $border;
+    border-radius: 8px;
+    background-color: $white;
+    padding: 30px 24px;
+    color: $darkGray;
+    margin-bottom: 24px;
+    transition: all 200ms ease-in-out;
+
+    @include breakpoint-up("md") {
+        padding: 40px;
+    }
+
+    &--subcard {
+        border-color: $border2;
+    }
+
+    &--form-hidden {
+        display: none;
+    }
+
+    &.disabled {
+        opacity: 0.4;
+    }
+
+    &__form-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+
+        .form__radio {
+            align-self: center;
+        }
+
+        &:hover {
+            cursor: pointer;
+            .card__title {
+                color: $moderateCyan;
+            }
+            .form__circle {
+                border-color: $moderateCyan;
+            }
+        }
+
+        .static__container--row {
+            visibility: hidden;
+            margin-left: auto;
+            margin-bottom: 0;
+            .static__maininfo,
+            .static__subinfo {
+                font-size: $font-md;
+            }
+
+            @include breakpoint-up("md") {
+                visibility: visible;
+            }
+        }
+    }
+
+    &__label {
+        @include breakpoint-up("md") {
+            display: flex;
+            flex-direction: row;
+        }
+        .card__title {
+            margin-bottom: 12px;
+            text-align: left;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            @include breakpoint-up("md") {
+                margin-bottom: 0;
+                margin-right: 16px;
+            }
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 24px;
+
+        @include breakpoint-up("md") {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    &__top {
+        position: relative;
+        margin-bottom: 24px;
+        img {
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @include breakpoint-up("md") {
+                top: -70px;
+            }
+        }
+    }
+
+    &__title {
+        text-align: center;
+        color: $black;
+        margin: 0 0 24px 0;
+        transition: color 200ms ease-in-out;
+        @include breakpoint-up("md") {
+            text-align: left;
+        }
+
+        &--small {
+            font-size: $font-md;
+            margin-bottom: 10px;
+
+            @include breakpoint-up("md") {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__subtitle {
+        color: $moderateCyan;
+        font-size: $font-md;
+        font-weight: 500;
+    }
+
+    &__info {
+        text-align: center;
+        line-height: 1.75;
+        margin-top: 0;
+        margin-bottom: 24px;
+
+        &--fit {
+            text-align: justify;
+        }
+
+        &--left {
+            text-align: left;
+        }
+    }
+
+    &__btns {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        @include breakpoint-down("xs") {
+            flex-direction: column;
+
+            .btn {
+                margin-bottom: 24px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &--separator {
+        margin-bottom: 30px;
+        &::before {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            right: 0;
+            content: "";
+            height: 2px;
+            width: calc(100% + 48px);
+            display: inline-block;
+            background-color: $border;
+            @include breakpoint-up("md") {
+                width: calc(100% + 80px);
+            }
+        }
+    }
+
+    &--separator-hidden {
+        &::before {
+            opacity: 0;
+            height: 0;
+        }
+    }
+
+    &--selected {
+        border-color: $darkCyan;
+    }
+}

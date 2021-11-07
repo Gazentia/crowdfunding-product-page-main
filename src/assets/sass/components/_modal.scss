@@ -1,0 +1,78 @@
+.modal {
+    position: absolute;
+    width: calc(100% - 48px);
+    background-color: $white;
+    border-radius: 10px;
+    padding: 32px 24px;
+    top: 140px;
+    left: 50%;
+    z-index: 10;
+    transform: scale(0) translateX(-50%);
+    transform-origin: 4%;
+    transition: transform 500ms ease-in-out;
+    margin: 0 auto;
+
+    @include breakpoint-up("md") {
+        max-width: map-get($mwidth, "md");
+    }
+    @include breakpoint-up("lg") {
+        max-width: map-get($mwidth, "lg");
+    }
+
+    &--open {
+        transform: scale(1) translateX(-50%);
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 32px;
+
+        &--no-dismiss {
+            flex-direction: column;
+        }
+    }
+
+    &__title {
+        color: $black;
+        font-weight: 700;
+        font-size: $font-lg;
+    }
+
+    &__info {
+        margin-top: 0;
+        margin-bottom: 32px;
+        text-align: justify;
+        line-height: 1.75;
+
+        &--center {
+            text-align: center;
+        }
+    }
+
+    &__icon {
+        margin-bottom: 32px;
+    }
+
+    &__dismiss {
+        svg {
+            cursor: pointer;
+            g {
+                fill: $darkGray;
+                transition: all 200ms ease-in-out;
+            }
+
+            &:hover {
+                g {
+                    fill: $black;
+                }
+            }
+        }
+    }
+
+    &__body {
+        margin-bottom: 32px;
+    }
+}

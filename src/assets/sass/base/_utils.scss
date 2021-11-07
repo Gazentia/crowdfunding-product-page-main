@@ -1,0 +1,37 @@
+.hide-for-mobile {
+  @include breakpoint-down("md") {
+    display: none !important;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up("md") {
+    display: none !important;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.blackdrop-1 {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(180deg, rgba($black, 0.8), transparent);
+  z-index: 1;
+}
+
+.blackdrop-2 {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba($black, 0.5);
+  z-index: 3;
+}

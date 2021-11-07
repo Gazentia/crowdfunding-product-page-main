@@ -1,0 +1,48 @@
+// Colors
+$moderateCyan: hsl(176, 50%, 47%);
+$darkCyan: hsl(176, 72%, 28%);
+$black: hsl(0, 0%, 0%);
+$darkGray: hsl(0, 0%, 48%);
+$background: #fafafa;
+$border: #f2f2f2;
+$border2: #E0E0E0;
+$border3: #BCBCBC;
+$white: #ffffff;
+$emptyGrey: #F4F4F4;
+
+// Font Sizes
+$font-sm: 0.75rem; // 12px
+$font-md: 1rem; //16px
+$font-lg: 1.4rem; // 22.4px
+$font-xlg: 1.75rem; // 28px
+
+// Max-width
+// 576px, 768px, 992px, 1200px, 1400px
+$mwidth: (
+  xs: 100%,
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+);
+
+// Breakpoints
+// 576px, 768px, 992px, 1200px, 1400px
+$breakpoints-up: (
+  xs: 0,
+  sm: "36rem",
+  md: "48rem",
+  lg: "62rem",
+  xl: "75rem",
+  xxl: "87.5rem",
+);
+
+// 359px, 575px, 767px, 991px, 1199px, 1399px
+$breakpoints-down: (
+  xs: "22.4375rem",
+  sm: "35.9375rem",
+  md: "47.9375rem",
+  lg: "61.9375rem",
+  xl: "74.9375rem",
+  xxl: "87.4375rem"
+);

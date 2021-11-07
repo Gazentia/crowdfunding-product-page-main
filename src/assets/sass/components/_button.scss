@@ -1,0 +1,79 @@
+.btn {
+    display: inline-block;
+    color: $white;
+    font-family: "Commissioner", sans-serif;
+    font-weight: 700;
+    padding: 19px 40px;
+    border-radius: 30px;
+    border: 0;
+    cursor: pointer;
+    
+    &:focus {
+        outline: none;
+    }
+
+    &--primary {
+        background-color: $moderateCyan;
+        transition: all 200ms ease-in-out;
+        &:hover,
+        &:active {
+            background-color: $darkCyan;
+        }
+    }
+
+    &:disabled,
+    &.disabled {
+        cursor: not-allowed;
+        background-color: $darkGray;
+
+        &:hover,
+        &:active {
+            background-color: $darkGray;
+        }
+    }
+
+    &--icon {
+        position: relative;
+        color: $darkGray;
+        padding: 0;
+
+        @include breakpoint-up("md") {
+            padding: 19px 40px 19px 70px;
+            background-color: $emptyGrey;
+        }
+        svg {
+            width: 56px;
+            height: 56px;
+            transition: all 200ms ease-in-out;
+
+            @include breakpoint-up("md") {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+
+        &:hover {
+            svg {
+                opacity: 0.7;
+            }
+        }
+        &:active,
+        &.active {
+            circle {
+                fill: $darkCyan;
+            }
+            path {
+                fill: $white;
+            }
+            color: $darkCyan;
+        }
+    }
+
+    &--label {
+        display: none;
+        @include breakpoint-up("md") {
+            display: inline-block;
+        }
+    }
+}

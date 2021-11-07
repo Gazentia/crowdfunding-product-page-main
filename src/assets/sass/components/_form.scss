@@ -1,0 +1,106 @@
+.form {
+    &__label {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 28px;
+    }
+    &__control {
+        &--inline {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .btn {
+                padding-left: 20px;
+                padding-right: 20px;
+
+                @include breakpoint-down("xs") {
+                    font-size: $font-sm;
+                }
+            }
+
+            > * {
+                flex-grow: 1;
+                width: 50%;
+                &:first-child {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+    &__input {
+        display: inline-block;
+        width: 100%;
+        padding: 17px 38px;
+        border: 2px solid $border2;
+        border-radius: 40px;
+        font-family: "Commissioner", sans-serif;
+        font-weight: 700;
+
+        &:focus {
+            outline: 0;
+        }
+
+        &--with-icon {
+            position: relative;
+            input {
+                padding-left: 46px;
+                padding-right: 12px;
+            }
+        }
+    }
+
+    &__radio {
+        position: relative;
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        margin-right: 12px;
+        input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            width: 25px;
+            height: 25px;
+
+            &:checked ~ .form__circle:after {
+                transform: scale(1);
+            }
+        }
+    }
+
+    &__circle {
+        position: absolute;
+        display: inline-block;
+        height: 25px;
+        width: 25px;
+        background-color: $white;
+        border: 1px solid $border3;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 200ms ease-in-out;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 4.4px;
+            top: 5.3px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: $darkCyan;
+            transform: scale(0);
+            transition: all 100ms ease-in-out;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        display: inline-block;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: 700;
+        color: $border2;
+        left: 28px;
+    }
+}
